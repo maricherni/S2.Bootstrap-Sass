@@ -2,15 +2,57 @@
 $primary: #5265E1;
 $secondary: #FA5959;
 
-#shape {
-    height: 75%;
-    width: 75%;
-    background-color: #5265E1;
-    border-radius: 100px 0 0 100px;
-    z-index: -1;
-    bottom: 0;
-    right: -100px;
-  }
+header {
+  margin-bottom: 7rem;
+}
 
+#shape {
+  height: 65%;
+  width: 80%;
+  background-color: #5265E1;
+  border-radius: 0 0 0 175px;
+  z-index: -1;
+  bottom: 0;
+  right: -20%;
+}
+
+#shape-1 {
+  height: 80%;
+  width: 100%;
+  background-color: #5265E1;
+  border-radius: 0 0 100px 0;
+  z-index: -1;
+  bottom: -15%;
+  left: -30%;
+}
+#shape-2 {
+  height: 75%;
+  width: 85%;
+  background-color: #5265E1;
+  border-radius: 0 0 100px 0;
+  z-index: -1;
+  bottom: -10%;
+  left: -30%;
+}
+#shape-3 {
+  height: 75%;
+  width: 80%;
+  background-color: #5265E1;
+  border-radius: 0 0 100px 0;
+  z-index: -1;
+  bottom: -15%;
+  left: -30%;
+}
+
+#features {
+  margin: 5rem 0 1rem 0;
+}
+
+#features-tabs .active {
+  border-bottom: solid 0.2rem red;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
 
 @import "./node_modules/bootstrap/scss/bootstrap.scss"
