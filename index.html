@@ -10,13 +10,13 @@
 <body>
   <header>
     <!-- NAVIGATION BAR -->
-    <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top mb-5">
+    <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
         <div class="container mt-4 mb-4">
           <!-- Brand -->
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand ms-3" href="#">
               <img src="./Imagenes/logo-bookmark.svg" class="img-fluid" alt="Logo Bookmark">
           </a>
-          <button class="navbar-toggler" type="image" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler me-3" type="image" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -39,34 +39,36 @@
         </div>
     </nav>
   </header>
-    <!-- CONTENT -->
-    <div class="container my-5">
+  <!-- LANDING PAGE -->
+  <div class="container my-5">
         <div class="row">
             <!-- Izquierda: Eslogan, descripción y botones -->
-            <div class="col-12 col-md-5 my-auto">
+            <div class="col-12 col-md-5 my-auto mx-3" id="texto1">
                 <h1 class="fw-bold mb-4">A Simple Bookmark Manager</h1>
-                <p class="mb-4 text-muted">A clean and simple interface to organize your favourite <br>wbsites. Open a new browser tab and see your sites load <br>instantly. Try it for free.</p>
+                <p class="mb-4 text-muted">A clean and simple interface to organize your favourite wbsites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
                 <button type="button" class="btn btn-primary me-2 shadow-sm fw-bold pt-2 pb-2">Get it on Chrome</button>
                 <button type="button" class="btn btn-light shadow-sm fw-bold pt-2 pb-2">Get it on Firefox</button>
             </div>
               <!-- Derecha: shape fondo lila + imagen -->
-              <div class="col-12 col-md-6 ms-auto position-relative">
+              <div class="col-12 col-md-6 ms-auto position-relative" id="imagen1">
                 <div id="shape" class="position-absolute"></div>
                   <div><img src="./Imagenes/illustration-hero.svg" class="img-fluid my-5" alt=""></div>
               </div>       
         </div>
-    </div>
+  </div>
     
- <!-- FEATURES -->    
- <div class="container my-4">
+<!-- FEATURES -->    
+<div class="container my-4">
   <div class="row justify-content-center">
-    <div class="col-12 col-sm-7">
-      <!-- Título y texto features -->
+    <!-- Título y texto features -->
+    <div class="col-12 col-lg-7">
       <div id="features">
         <h2 class="fw-bold mb-3 text-center">Features</h2>
         <p class="text-muted text-center px-5 mx-5 mt-2 mb-5">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
       </div>
-      <!-- TABS -->
+    </div>
+    <!-- TABS -->
+    <div class="col-12 col-lg-7">
       <ul class="nav nav-tabs justify-content-between" id="features-tabs" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link text-black active" id="simple-tab" data-bs-toggle="tab" data-bs-target="#simple" type="button" role="tab" aria-controls="simple" aria-selected="true">Simple Bookmarking</button>
@@ -78,67 +80,119 @@
           <button class="nav-link text-black" id="easy-tab" data-bs-toggle="tab" data-bs-target="#easy" type="button" role="tab" aria-controls="easy" aria-selected="false">Easy Sharing</button>
         </li>
       </ul>
+    </div>
+  </div>
+      <!-- Contenido TABS -->
+      <div class="tab-content">
+        <!-- TAB Simple Bookmarking -->
+        <div class="tab-pane fade show active" id="simple" role="tabpanel" aria-labelledby="simple-tab">
+          <div class="container">
+            <div class="row">
+              <!-- Izquierda: shape fondo lila + imagen -->
+              <div class="col-12 col-md-6 ms-auto position-relative my-5" id="imagen2">
+                <div id="shape-1" class="position-absolute"></div>
+                <div id="image"><img src="./Imagenes/illustration-features-tab-1.svg" class="img-fluid" alt=""></div>
+              </div>
+              <!-- Derecha: Eslogan, descripción y botones -->
+              <div class="col-12 col-md-5 my-auto mx-3" id="texto2">
+                  <h2 class="fw-bold mt-4">Bookmark in one click</h2>
+                  <p class="mb-4 text-muted">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                  <button type="button" class="btn btn-primary me-2 shadow-sm fw-bold pt-2 pb-2">More Info</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TAB Speedy Searching -->
+        <div class="tab-pane fade" id="speedy" role="tabpanel" aria-labelledby="speedy-tab">
+          <div class="container">
+            <div class="row">
+              <!-- Izquierda: shape fondo lila + imagen -->
+              <div class="col-12 col-md-6 ms-auto position-relative my-5 ">
+                <div id="shape-2" class="position-absolute"></div>
+                <div id="image"><img src="./Imagenes/illustration-features-tab-2.svg" class="img-fluid" alt=""></div>
+              </div>
+              <!-- Derecha: Eslogan, descripción y botones -->
+              <div class="col-12 col-md-5 my-auto">
+                <h2 class="fw-bold">Speedy Searching</h2>
+                <p class="mb-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem mollitia ipsam suscipit ullam quod recusandae iusto optio vero porro, accusantium fugiat nesciunt impedit debitis! Dolorum reprehenderit iste fuga officiis cumque?</p>
+                <button type="button" class="btn btn-primary me-2 shadow-sm fw-bold pt-2 pb-2">More Info</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TAB Easy Sharing -->
+        <div class="tab-pane fade" id="easy" role="tabpanel" aria-labelledby="easy-tab">
+          <div class="container">
+            <div class="row">
+              <!-- Izquierda: shape fondo lila + imagen -->
+              <div class="col-12 col-md-6 ms-auto position-relative my-5">
+                <div id="shape-3" class="position-absolute"></div>
+                <div id="image"><img src="./Imagenes/illustration-features-tab-3.svg" class="img-fluid" alt=""></div>
+              </div>
+              <!-- Derecha: Eslogan, descripción y botones -->
+              <div class="col-12 col-md-5 my-auto">
+                <h2 class="fw-bold">Easy Sharing</h2>
+                <p class="mb-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloribus explicabo temporibus perferendis totam repudiandae aliquam deleniti voluptatibus? Saepe in officiis iure nihil sint! Iste soluta vitae aperiam nobis quibusdam.</p>
+                <button type="button" class="btn btn-primary me-2 shadow-sm fw-bold pt-2 pb-2">More Info</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+</div>
+
+<!-- DOWNLOADS -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <!-- Título y texto Downloads -->
+    <div class="col-12 col-lg-7">
+      <div id="downloads">
+        <h2 class="fw-bold mb-3 text-center">Download the extension</h2>
+        <p class="text-muted text-center px-5 mx-5 mt-2 mb-5">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
       </div>
     </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center" id="cards">
+      <div class="col-8 col-md-4 col-lg-3 mt-1">
+        <div class="card align-items-center shadow bg-body border-top-0" style="width: auto; border-radius: 15px;">
+          <img src="./Imagenes/logo-chrome.svg" class="my-4" alt="logo Chrome">
+          <div class="card-body">
+            <h6 class="card-title text-center fw-bold ff-arial">Add to Chrome</h6>
+            <p class="card-text">Minimum version 62</p>
+          </div>
+          <div><img src="./Imagenes/bg-dots.svg" alt=""></div>
+            <a href="#" class="btn btn-primary my-4">Add & Install Extension</a>
+        </div>
+      </div>
+      <div class="col-8 col-md-4 col-lg-3 my-5">
+        <div class="card align-items-center shadow bg-body border-top-0" style="width: auto;">
+          <img src="./Imagenes/logo-firefox.svg" class="my-4" alt="logo Chrome">
+          <div class="card-body">
+            <h6 class="card-title text-center fw-bold ff-arial">Add to Firefox</h6>
+            <p class="card-text">Minimum version 55</p>
+          </div>
+          <div><img src="./Imagenes/bg-dots.svg" alt=""></div>
+            <a href="#" class="btn btn-primary my-4">Add & Install Extension</a>
+        </div>
+      </div>
+      <div class="col-8 col-md-4 col-lg-3 align-self-end">
+        <div class="card align-items-center shadow bg-body border-top-0" style="width: auto;">
+          <img src="./Imagenes/logo-opera.svg" class="my-4" alt="logo Chrome">
+          <div class="card-body">
+            <h6 class="card-title text-center fw-bold ff-arial">Add to Opera</h6>
+            <p class="card-text">Minimum version 46</p>
+          </div>
+          <div><img src="./Imagenes/bg-dots.svg" alt=""></div>
+            <a href="#" class="btn btn-primary my-4">Add & Install Extension</a>
+        </div>
+      </div>
+    </div>
+      
   </div>
 </div>
-<!-- Contenido TABS -->
-<div class="tab-content">
-  <!-- TAB Simple Bookmarking -->
-  <div class="tab-pane fade show active" id="simple" role="tabpanel" aria-labelledby="simple-tab">
-    <div class="container">
-      <div class="row">
-        <!-- Izquierda: shape fondo lila + imagen -->
-        <div class="col-12 col-md-6 ms-auto position-relative my-5">
-          <div id="shape-1" class="position-absolute"></div>
-          <div id="image"><img src="./Imagenes/illustration-features-tab-1.svg" class="img-fluid" alt=""></div>
-        </div>
-        <!-- Derecha: Eslogan, descripción y botones -->
-        <div class="col-12 col-md-5 my-auto">
-            <h2 class="fw-bold">Bookmark in one click</h2>
-            <p class="mb-4 text-muted">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-            <button type="button" class="btn btn-primary me-2 shadow-sm fw-bold pt-2 pb-2">More Info</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- TAB Speedy Searching -->
-  <div class="tab-pane fade" id="speedy" role="tabpanel" aria-labelledby="speedy-tab">
-    <div class="container">
-      <div class="row">
-        <!-- Izquierda: shape fondo lila + imagen -->
-        <div class="col-12 col-md-6 ms-auto position-relative my-5 ">
-          <div id="shape-2" class="position-absolute"></div>
-          <div id="image"><img src="./Imagenes/illustration-features-tab-2.svg" class="img-fluid" alt=""></div>
-        </div>
-        <!-- Derecha: Eslogan, descripción y botones -->
-        <div class="col-12 col-md-5 my-auto">
-          <h2 class="fw-bold">Speedy Searching</h2>
-          <p class="mb-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem mollitia ipsam suscipit ullam quod recusandae iusto optio vero porro, accusantium fugiat nesciunt impedit debitis! Dolorum reprehenderit iste fuga officiis cumque?</p>
-          <button type="button" class="btn btn-primary me-2 shadow-sm fw-bold pt-2 pb-2">More Info</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- TAB Easy Sharing -->
-  <div class="tab-pane fade" id="easy" role="tabpanel" aria-labelledby="easy-tab">
-    <div class="container">
-      <div class="row">
-        <!-- Izquierda: shape fondo lila + imagen -->
-        <div class="col-12 col-md-6 ms-auto position-relative my-5">
-          <div id="shape-3" class="position-absolute"></div>
-          <div id="image"><img src="./Imagenes/illustration-features-tab-3.svg" class="img-fluid" alt=""></div>
-        </div>
-         <!-- Derecha: Eslogan, descripción y botones -->
-         <div class="col-12 col-md-5 my-auto">
-          <h2 class="fw-bold">Easy Sharing</h2>
-          <p class="mb-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloribus explicabo temporibus perferendis totam repudiandae aliquam deleniti voluptatibus? Saepe in officiis iure nihil sint! Iste soluta vitae aperiam nobis quibusdam.</p>
-          <button type="button" class="btn btn-primary me-2 shadow-sm fw-bold pt-2 pb-2">More Info</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+    
+
     
   
 

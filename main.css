@@ -1,15 +1,23 @@
+@charset "UTF-8";
+/* Para dar espacio entre la barra de navegación y el contenido */
 header {
   margin-bottom: 7rem;
 }
 
+/* Para eliminar el borde del botón de colapse */
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+/* Fondos lila tras las imágenes */
 #shape {
   height: 65%;
-  width: 80%;
+  width: 90%;
   background-color: #5265E1;
   border-radius: 0 0 0 175px;
   z-index: -1;
-  bottom: 0;
-  right: -20%;
+  bottom: 10%;
+  right: -10%;
 }
 
 #shape-1 {
@@ -42,15 +50,67 @@ header {
   left: -30%;
 }
 
-#features {
+/* Espacio entre cada parte de la página (portada, features, downloads...) */
+#features, #downloads {
   margin: 5rem 0 1rem 0;
 }
 
+/* Estilo de TABS */
 #features-tabs .active {
   border-bottom: solid 0.2rem red;
   border-top: none;
   border-right: none;
   border-left: none;
+}
+
+/* MOBILE VERSION */
+@media only screen and (max-width: 576px) {
+  #imagen1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #texto1 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  #features h2, #features .h2, #features p {
+    width: 100%;
+    text-align: center;
+  }
+  #features-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    border-bottom: 1px solid #dee2e6;
+  }
+  #simple-tab, #speedy-tab, #easy-tab {
+    justify-items: center;
+    border-bottom: 1px solid #dee2e6;
+  }
+  #speedy-tab {
+    justify-items: center;
+    border-bottom: 1px solid #dee2e6;
+  }
+  #texto2 {
+    text-align: center;
+  }
+  /* Eliminar el botón de "more info" */
+  #texto2 button {
+    display: none;
+  }
+  .cards {
+    width: 15rem;
+  }
 }
 
 /*!
