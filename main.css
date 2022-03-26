@@ -9,6 +9,11 @@ header {
   border: none;
 }
 
+/* Reducir la imagen del "Simple Bookmarking" tab, que queda muy grande */
+#image2 {
+  width: 80%;
+}
+
 /* Fondos lila tras las imágenes */
 #shape {
   height: 65%;
@@ -51,7 +56,7 @@ header {
 }
 
 /* Espacio entre cada parte de la página (portada, features, downloads...) */
-#features, #downloads {
+#features, #downloads, #FAQs {
   margin: 5rem 0 1rem 0;
 }
 
@@ -61,10 +66,31 @@ header {
   border-top: none;
   border-right: none;
   border-left: none;
+  font-weight: bold;
 }
 
+/* Separador cards. Ajustar los puntos de separación dentro de la tarjeta y que no se salgan al encogerlos */
+#separador-dots {
+  width: 100%;
+}
+
+/* Lineas superior e inferior del accordion FAQs */
+.accordion-flush {
+  border-top: solid 1px #dee2e6;
+  border-bottom: solid 1px #dee2e6;
+}
+
+/* Cambio de color de la flecha desplegable del accordion */
 /* MOBILE VERSION */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
+  /* Márgenes laterales barra de navegación */
+  .navbar-brand {
+    margin-left: 2rem;
+  }
+  .navbar-toggler {
+    margin-right: 1rem;
+  }
+  /* Cambio de orden de la imagen y el texto de la página de inicio */
   #imagen1 {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -77,10 +103,21 @@ header {
     margin-top: 1rem;
     text-align: center;
   }
-  #features h2, #features .h2, #features p {
+  /* Reajustar la imagen del "Simple Bookmarking" tab, que en versión móvil se ve pequeña */
+  #image2 {
     width: 100%;
-    text-align: center;
   }
+  /* FEATURES. Ajuste del texto al centro */
+  #features h2, #features .h2, #features p {
+    margin-left: 2rem;
+  }
+  /* TABS
+  Ajuste de lineas de separación al ancho de pantalla */
+  ul {
+    border-top: solid 1px #dee2e6;
+    border-bottom: solid 1px #dee2e6;
+  }
+  /* Cambio de dirección de las tabs a columnas */
   #features-tabs {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -89,25 +126,23 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-bottom: 1px solid #dee2e6;
+    border-width: 100%;
   }
   #simple-tab, #speedy-tab, #easy-tab {
-    justify-items: center;
-    border-bottom: 1px solid #dee2e6;
-  }
-  #speedy-tab {
-    justify-items: center;
-    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1rem;
   }
   #texto2 {
     text-align: center;
   }
-  /* Eliminar el botón de "more info" */
+  /* TABS. Eliminar el botón de "more info" de todas las tabs*/
   #texto2 button {
     display: none;
   }
+  /* CARDS. Tamaño fijo */
   .cards {
     width: 15rem;
   }
@@ -5446,7 +5481,7 @@ fieldset:disabled .btn {
   height: 1.25rem;
   margin-left: auto;
   content: "";
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='blue'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: 1.25rem;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;

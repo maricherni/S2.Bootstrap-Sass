@@ -12,6 +12,11 @@ header {
   border: none;
 }
 
+/* Reducir la imagen del "Simple Bookmarking" tab, que queda muy grande */
+#image2{
+  width: 80%;
+}
+
 /* Fondos lila tras las imágenes */
 #shape {
   height: 65%;
@@ -51,7 +56,7 @@ header {
   left: -30%;
 }
 /* Espacio entre cada parte de la página (portada, features, downloads...) */
-#features, #downloads {
+#features, #downloads, #FAQs {
   margin: 5rem 0 1rem 0;
 }
 
@@ -61,11 +66,32 @@ header {
   border-top: none;
   border-right: none;
   border-left: none;
+  font-weight: bold;
 }
+
+/* Separador cards. Ajustar los puntos de separación dentro de la tarjeta y que no se salgan al encogerlos */
+#separador-dots {
+  width: 100%;
+}
+/* Lineas superior e inferior del accordion FAQs */
+.accordion-flush {
+  border-top: solid 1px #dee2e6;
+  border-bottom: solid 1px #dee2e6;
+}
+/* Cambio de color de la flecha desplegable del accordion */
+$accordion-icon-color: blue;
 
 
 /* MOBILE VERSION */
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 768px){
+  /* Márgenes laterales barra de navegación */
+  .navbar-brand {
+    margin-left: 2rem;
+   }
+   .navbar-toggler {
+     margin-right: 1rem;
+   }
+   /* Cambio de orden de la imagen y el texto de la página de inicio */
   #imagen1 {
     order: 1;
   }
@@ -74,36 +100,43 @@ header {
     margin-top: 1rem;
     text-align: center;
   }
-  
-  #features h2, #features p {
+  /* Reajustar la imagen del "Simple Bookmarking" tab, que en versión móvil se ve pequeña */
+  #image2 {
     width: 100%;
-    text-align: center;
   }
-  
+  /* FEATURES. Ajuste del texto al centro */
+  #features h2, #features p{
+    margin-left: 2rem;
+  }
+  /* TABS
+  Ajuste de lineas de separación al ancho de pantalla */
+  ul {
+    border-top: solid 1px #dee2e6;
+    border-bottom: solid 1px #dee2e6;
+ }
+  /* Cambio de dirección de las tabs a columnas */
   #features-tabs {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     border-bottom: 1px solid #dee2e6;
+    border-width: 100%;
   }
   #simple-tab, #speedy-tab, #easy-tab {
-    justify-items: center;
-    border-bottom: 1px solid #dee2e6;
-  }
-  #speedy-tab{
-    justify-items: center;
-    border-bottom: 1px solid #dee2e6;
+  margin-bottom: 1rem;
   }
   #texto2 {
     text-align: center;    
   }
-  /* Eliminar el botón de "more info" */
+  /* TABS. Eliminar el botón de "more info" de todas las tabs*/
   #texto2 button {
     display: none;
   }
+  /* CARDS. Tamaño fijo */
   .cards {
     width: 15rem;
   }
 }
+
 
 @import "./node_modules/bootstrap/scss/bootstrap.scss"
