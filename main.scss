@@ -7,7 +7,7 @@ header {
   margin-bottom: 7rem;
 }
 
-/* Para eliminar el borde del botón de colapse */
+/* Eliminar el borde del botón de colapse */
 .navbar-light .navbar-toggler {
   border: none;
 }
@@ -78,9 +78,26 @@ header {
   border-top: solid 1px #dee2e6;
   border-bottom: solid 1px #dee2e6;
 }
-/* Cambio de color de la flecha desplegable del accordion */
+
 $accordion-icon-color: blue;
 
+/* FOOTER*/
+/* Cambios de letras y tamaños*/
+#joiners {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+}
+
+/* Medidas iconos facebook y twitter */
+#media-icon {
+  width: 70%;
+}
+
+/* Tamaño letra footer-navbar */
+#footer-navlink {
+  font-size: 0.7rem;
+}
 
 /* MOBILE VERSION */
 @media only screen and (max-width: 768px){
@@ -99,6 +116,15 @@ $accordion-icon-color: blue;
     order: 2;
     margin-top: 1rem;
     text-align: center;
+  }
+  /* Evitar que salga la barra horizontal de movimiento de la pantalla. Las formas del fondo hacen que se salga de los márgenes */  
+  #shape {
+    right: 0;
+    width: 90%;
+  }
+  #shape-1, #shape-2, #shape-3 {
+   left: 0;
+   width: 80%;
   }
   /* Reajustar la imagen del "Simple Bookmarking" tab, que en versión móvil se ve pequeña */
   #image2 {
@@ -135,6 +161,36 @@ $accordion-icon-color: blue;
   /* CARDS. Tamaño fijo */
   .cards {
     width: 15rem;
+  }
+  /* FOOTER
+  Poner el formulario (email + botón) en columnas */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  #InputEmail1 {
+    margin-bottom: 1rem;
+  }
+  /* Ajustar el tamaño del botón y que quede en una línea */
+  #button-contact {
+    width: 100%;
+  }
+/*Poner todos los componentes de navbar (logo, opciones y redes) en una columna */
+  #footer-navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* Poner el menú de opciones de navbar en una columna */
+  #options-navbar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #footer-navlink {
+    font-size: 0.8rem;
+    text-align: center;
   }
 }
 

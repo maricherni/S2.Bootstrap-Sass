@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css"/>
-    <title>Bootstrap & SASS</title>
+    <title>Bootstrap & SASS</title> 
+    <link rel="icon" type="image/x-icon" href="./Imagenes/favicon-32x32.png" >
 </head>
 <body>
   <header>
@@ -23,7 +24,7 @@
             <!-- Options -->
             <ul class="navbar-nav ms-auto me-5">
               <li class="nav-item">
-                <a class="nav-link fs-6 fw-bold" aria-current="page" href="#">FEATURES</a>
+                <a class="nav-link fs-6 fw-bold" href="#">FEATURES</a>
               </li>
               <li class="nav-item ms-4 ">
                 <a class="nav-link fs-6 fw-bold" href="#">PRICING</a>
@@ -265,18 +266,93 @@
       </div>
       <div class="row justify-content-center">
         <div class="d-grid col-4 col-md-3 col-lg-3">  
-          <button class="btn btn-primary shadow px-0 py-3 my-5 fs-6" type="button" id="FAQ-button">More Info</button>
+          <button class="btn btn-primary shadow px-0 py-2 my-5 fs-6" type="button" id="FAQ-button">More Info</button>
         </div>
       </div>
     </div>
   </div>
 </div>  
-    
-
-    
+<footer>
+<!--   FOOTER. Texto-->  
+  <div class="container bg-primary mt-5">
+    <div class="row justify-content-center">
+      <div class="col-8 col-md-4">
+        <p class="text-white fw-light text-center mt-5 mb-4" id="joiners">35.000+ ALREADY JOINED</p>
+        <h4 class="text-white text-center mb-4">Stay up-to-date with what we're doing</h4>
+      </div> 
+    </div>
+    <!-- Formulario email -->
+    <div class="row justify-content-center mt-2">
+      <div class="col-12 col-md-9">
+          <div class="container">
+            <form class="row needs-validation justify-content-center" novalidate>
+                <div class="col-12 col-md-4 ms-auto input-group-sm">
+                  <input type="email" class="form-control form-control-sm ps-3 border" id="InputEmail1" placeholder="Enter your email address" required >
+                  <div class="valid-feedback text-info fw-light">Formato válido</div>
+                  <div class="invalid-feedback">Formato no válido</div>
+                </div>
+                <div class="col-12 col-md-5">
+                  <button type="submit" class="btn btn-secondary text-white fs-6 mb-5" id="button-contact">Contact us</button>
+                </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="container bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+      <div class="container" id="footer-navbar">
+        <a class="navbar-brand" href="#" id="logo-footer">
+          <img src="./Imagenes/logo-bookmark.svg" class="img-fluid ms-md-5" alt="Logo Bookmark">
+        </a>
+          <ul class="navbar-nav border-0 gap-3 me-md-auto" id="options-navbar">
+            <li class="nav-item">
+              <a class="nav-link text-white fw-light" href="#" id="footer-navlink">FEATURES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-light" href="#"id="footer-navlink">PRICING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-light" href="#"id="footer-navlink">CONTACT</a>
+            </li>
+          </ul>
+          <ul class="d-flex border-0 me-5">
+            <li class="nav-item">
+              <a class="nav-link img-fluid" href="#"><img src="./Imagenes/icon-facebook.svg" alt="" id="media-icon"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link img-fluid" href="#"><img src="./Imagenes/icon-twitter.svg" alt="" id="media-icon"></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </div>
   
+  
+</footer>
+  
+<!-- Validación formulario footer-->
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
 
-    
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>  
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
