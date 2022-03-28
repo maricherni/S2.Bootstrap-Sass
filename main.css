@@ -69,6 +69,25 @@ header {
   font-weight: bold;
 }
 
+.card-google, .card-firefox, .card-opera {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: none;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* CARDS. Poner las cards en escalera  */
+.cards .col-8:nth-child(2) {
+  margin-top: 2rem;
+}
+
+.cards .col-8:nth-child(3) {
+  margin-top: 4rem;
+}
+
 /* Separador cards. Ajustar los puntos de separación dentro de la tarjeta y que no se salgan al encogerlos */
 #separador-dots {
   width: 100%;

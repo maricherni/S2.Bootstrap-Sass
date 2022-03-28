@@ -68,6 +68,22 @@ header {
   border-left: none;
   font-weight: bold;
 }
+.card-google {
+  align-items: center;
+  border-top: none;
+  border-radius: 25px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.card-firefox, .card-opera {
+  @extend .card-google
+}
+/* CARDS. Poner las cards en escalera  */
+.cards .col-8:nth-child(2){
+  margin-top: 2rem;
+}
+.cards .col-8:nth-child(3){
+  margin-top: 4rem;
+}
 
 /* Separador cards. Ajustar los puntos de separación dentro de la tarjeta y que no se salgan al encogerlos */
 #separador-dots {
