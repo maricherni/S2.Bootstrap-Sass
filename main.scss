@@ -73,15 +73,16 @@ header {
   border-top: none;
   border-radius: 25px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  margin-top: 2rem;
 }
 .card-firefox, .card-opera {
   @extend .card-google
 }
 /* CARDS. Poner las cards en escalera  */
-.cards .col-8:nth-child(2){
+#cards .col-8:nth-child(2){
   margin-top: 2rem;
 }
-.cards .col-8:nth-child(3){
+#cards .col-8:nth-child(3){
   margin-top: 4rem;
 }
 
